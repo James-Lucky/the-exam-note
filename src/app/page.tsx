@@ -14,6 +14,8 @@ export default function Home() {
             Soch Liya
           </button>
 
+          <h1>Aacha ji to aisi baat hai </h1>
+
         </div>
       </div>
     </main>

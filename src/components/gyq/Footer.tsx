@@ -1,0 +1,3 @@
+import Link from "next/link";
+
+export default function Footer() { return <footer className="border-t border-slate-200 bg-white"><div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-7 text-center text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-7 sm:text-left"><p>© 2026 GYQ · Built for focused exam revision.</p><div className="flex justify-center gap-4 font-bold text-slate-600"><a href="https://instagram.com/get.your.questions" target="_blank" rel="noreferrer">Instagram @get.your.questions</a><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><Link href="/refunds">Refunds</Link></div><p className="font-bold text-slate-700">Developed by Faraz & Lucky</p></div></footer>; }

@@ -1,0 +1,3 @@
+import Link from "next/link";
+import Image from "next/image";
+export default function Brand() { return <Link href="/" className="flex items-center gap-2 sm:gap-3" aria-label="GYQ home"><span className="grid h-9 w-[88px] shrink-0 place-items-center sm:h-10 sm:w-[96px]"><Image src="/gyq-logo-transparent.png" alt="GYQ logo" width={96} height={40} className="h-full w-full object-contain" priority /></span><span className="hidden border-l border-slate-200 pl-3 leading-none md:block"><span className="block text-[9px] font-bold tracking-[.16em] text-zinc-500">GET YOUR QUESTIONS</span><span className="mt-1 block text-[9px] font-bold text-zinc-400">CRAM SMART. WIN BIG.</span></span></Link>; }

@@ -1,26 +1,19 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+:root { --ink: #12131a; --paper: #f3f5fb; }
+* { box-sizing: border-box; }
+html { background: var(--paper); }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; letter-spacing: -0.01em; }
+button { font: inherit; }
+.ambient { background-image: radial-gradient(circle at 3% 3%, rgba(199, 210, 254, .72), transparent 26rem), radial-gradient(circle at 96% 12%, rgba(224, 231, 255, .85), transparent 27rem); }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.section-rule { border-top: 1px solid rgba(148, 163, 184, .18); }
+@keyframes gyq-rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes gyq-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@media (prefers-reduced-motion: no-preference) {
+  .ambient main > section, .ambient main > div, .ambient article { animation: gyq-rise .45s ease both; }
+  .ambient main > section:nth-child(2), .ambient main > div:nth-child(2) { animation-delay: .08s; }
+  .ambient button, .ambient a { transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease; }
+  .ambient button:hover, .ambient a:hover { transform: translateY(-1px); }
+  .ambient .animate-float { animation: gyq-float 2.8s ease-in-out infinite; }
 }
